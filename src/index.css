@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-size: 18px;
+}
+
+#root {
+    @apply p-5
+}
+
+.mobile-bg-img{
+    background-image: url('./assets/images/bg-boost-mobile.svg');
+    background-size: cover;
+    background-position: center;
+}

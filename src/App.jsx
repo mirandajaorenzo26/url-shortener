@@ -1,4 +1,5 @@
 import { useRef, useState, useMemo } from "react";
+import HeroSection from "./assets/components/HeroSection";
 
 function App() {
   const inputRef = useRef();
@@ -38,9 +39,25 @@ function App() {
 
   return (
     <>
-      <form action="" onSubmit={(e) => handleSubmit(e)}>
-        <input ref={inputRef} type="text" className="border bg-neutral-500" />
-        <button type="submit">Shorten</button>
+      <HeroSection />
+
+      <form
+        action=""
+        onSubmit={(e) => handleSubmit(e)}
+        className="grid p-5 gap-5 bg-dark-violet mobile-bg-img rounded-xl"
+      >
+        <input
+          ref={inputRef}
+          type="text"
+          className="rounded-md py-4 px-5"
+          placeholder="Shorten a link here..."
+        />
+        <button
+          type="submit"
+          className="py-4 px-3 rounded-md text-white bg-cyan"
+        >
+          Shorten
+        </button>
       </form>
       <ul className="bg-slate-500 w-full ">{renderedList}</ul>
     </>
