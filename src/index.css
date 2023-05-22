@@ -4,15 +4,17 @@
 @tailwind utilities;
 
 body{
-    font-size: 18px;
+    font-size: 18px; 
 }
 
-#root {
-    @apply p-5
-}
+
 
 .mobile-bg-img{
     background-image: url('./assets/images/bg-boost-mobile.svg');
     background-size: cover;
     background-position: center;
+}
+
+.rounded-btn{
+    @apply bg-cyan py-4 px-10 text-white font-bold
 }
