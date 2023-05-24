@@ -8,13 +8,10 @@ body{
 }
 
 
-
-.mobile-bg-img{
-    background-image: url('./assets/images/bg-boost-mobile.svg');
-    background-size: cover;
-    background-position: center;
+.rounded-btn{
+    @apply bg-cyan py-4 px-10 text-white font-bold hover:bg-light-cyan
 }
 
-.rounded-btn{
-    @apply bg-cyan py-4 px-10 text-white font-bold
+.error{
+    @apply border-4 border-red
 }

@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         cyan: "#2acfcf",
+        "light-cyan": "#9ce2e2",
         "dark-violet": "#3b3054",
         red: "#f46262",
         "lighter-gray": "#f0f1f6",
@@ -18,5 +19,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("prettier-plugin-tailwindcss")],
 };
