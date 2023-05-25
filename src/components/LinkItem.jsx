@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import { ClipboardContext } from "./LinkList";
-import { LinkContext } from "../../App";
+import { LinkContext } from "../App";
 
 import Button from "./shared/Button";
 import { MdClose } from "react-icons/md";

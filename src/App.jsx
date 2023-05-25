@@ -1,9 +1,9 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import HeroSection from "./assets/components/HeroSection";
-import AdvanceStatistics from "./assets/components/AdvanceStatistics";
-import Header from "./assets/components/Header";
-import BoostLinks from "./assets/components/BoostLinks";
-import Footer from "./assets/components/Footer";
+import HeroSection from "./components/HeroSection";
+import AdvanceStatistics from "./components/AdvanceStatistics";
+import Header from "./components/Header";
+import BoostLinks from "./components/BoostLinks";
+import Footer from "./components/Footer";
 
 export const LinkContext = createContext();
 

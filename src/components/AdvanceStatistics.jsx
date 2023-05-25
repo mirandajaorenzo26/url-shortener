@@ -1,7 +1,7 @@
 import LinkList from "./LinkList";
-import BrandRecognitionImg from "../images/icon-brand-recognition.svg";
-import DetaildRecordsImg from "../images/icon-detailed-records.svg";
-import FullyCustomizableImg from "../images/icon-fully-customizable.svg";
+import BrandRecognitionImg from "../assets/images/icon-brand-recognition.svg";
+import DetaildRecordsImg from "../assets/images/icon-detailed-records.svg";
+import FullyCustomizableImg from "../assets/images/icon-fully-customizable.svg";
 
 const AdvanceStatistics = () => {
   return (
