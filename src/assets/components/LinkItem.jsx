@@ -1,9 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+
+import { ClipboardContext } from "./LinkList";
+import { LinkContext } from "../../App";
+
 import Button from "./shared/Button";
-import { AiFillCloseCircle } from "react-icons/ai";
-import { ClipboardContext } from "./AdvanceStatistics";
-const LinkItem = ({ original, shorten, className }) => {
-  const writeToClipboard = useContext(ClipboardContext);
+import { MdClose } from "react-icons/md";
+
+const LinkItem = ({ id, original, shorten, className }) => {
+  const { writeToClipboard, clipboardData } = useContext(ClipboardContext);
+  const { deleteLink } = useContext(LinkContext);
 
   return (
     <div
@@ -13,15 +18,24 @@ const LinkItem = ({ original, shorten, className }) => {
       <div className="flex flex-col items-center gap-5 lg:flex-row">
         <p className="text-cyan">{shorten}</p>
         <div className="flex items-center gap-2">
-          <Button
-            text="Copy"
-            className={"rounded-btn rounded-md lg:py-3"}
-            onClick={() => writeToClipboard(shorten)}
-          />
-          <AiFillCloseCircle
-            size={32}
-            className="cursor-pointer rounded-full fill-red"
-          />
+          {clipboardData !== shorten ? (
+            <Button
+              text="Copy"
+              className={
+                "rounded-btn rounded-md bg-cyan hover:bg-light-cyan lg:py-3"
+              }
+              onClick={() => writeToClipboard(shorten)}
+            />
+          ) : (
+            <Button
+              text="Copied"
+              className={"rounded-btn rounded-md  bg-dark-violet lg:py-3"}
+            />
+          )}
+
+          <button onClick={() => deleteLink(id)}>
+            <MdClose size={32} className="cursor-pointer fill-red" />
+          </button>
         </div>
       </div>
     </div>

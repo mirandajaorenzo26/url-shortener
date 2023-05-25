@@ -1,45 +1,58 @@
-import { createContext, useContext, useMemo, useState } from "react";
-import { LinkContext } from "../../App";
-import LinkItem from "./LinkItem";
-
-export const ClipboardContext = createContext();
+import LinkList from "./LinkList";
+import BrandRecognitionImg from "../images/icon-brand-recognition.svg";
+import DetaildRecordsImg from "../images/icon-detailed-records.svg";
+import FullyCustomizableImg from "../images/icon-fully-customizable.svg";
 
 const AdvanceStatistics = () => {
-  const { links } = useContext(LinkContext);
-
-  const [clipboardData, setClipboardData] = useState("");
-
-  const writeToClipboard = (text) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        setClipboardData(text);
-      })
-      .catch((error) => {
-        console.error("Failed to write to clipboard: ", error);
-      });
-  };
-
-  const renderedList = useMemo(() => {
-    return links.map((item) => (
-      <LinkItem
-        key={crypto.randomUUID()}
-        original={item.original}
-        shorten={item.shorten}
-      />
-    ));
-  }, [links]);
-
   return (
     <section className="pt-[89px]">
-      <ClipboardContext.Provider value={writeToClipboard}>
-        <ul>{renderedList}</ul>
-      </ClipboardContext.Provider>
-      <h2 className="mt-10 text-2xl font-bold">Advanced Statistics</h2>
-      <p className="my-2 text-grayish-violet">
-        Track how your links are performing across the web with our advanced
-        statistics dashboard.
-      </p>
+      <LinkList />
+      <div className="mb-16 mt-16 grid justify-center lg:mb-0">
+        <h2 className="my-5 text-3xl font-bold lg:text-4xl">
+          Advanced Statistics
+        </h2>
+        <p className="my-2 max-w-lg px-2 text-grayish-violet">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <div className="pb-20 font-normal">
+        <div className=" relative flex flex-col items-center gap-20  md:gap-5 lg:flex-row lg:text-left xl:gap-20">
+          <div className="absolute left-[50%] h-full w-2 translate-x-[-50%]  bg-cyan lg:top-[50%] lg:h-2 lg:w-full lg:translate-y-[50%]"></div>
+          <div className="relative   rounded-md bg-white px-7 py-10">
+            <div className="absolute left-[50%] top-0 w-max translate-x-[-50%]  translate-y-[-50%] rounded-full bg-dark-violet p-5 lg:left-7  lg:translate-x-[0]">
+              <img src={BrandRecognitionImg} alt="" />
+            </div>
+            <h3 className="my-5 text-xl font-bold">Brand Recognition</h3>
+            <p className=" text-sm leading-relaxed text-gray lg:text-base">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div className="relative  rounded-md bg-white px-7 py-10 md:mt-16 ">
+            <div className="absolute left-[50%] top-0 w-max  translate-x-[-50%]  translate-y-[-50%] rounded-full bg-dark-violet  p-5 lg:left-7 lg:translate-x-[0]">
+              <img src={DetaildRecordsImg} alt="" />
+            </div>
+            <h3 className="my-5 text-xl font-bold">Detailed Records</h3>
+            <p className="text-sm leading-relaxed text-gray lg:text-base">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div className="relative  rounded-md bg-white px-7  py-10  md:mt-32">
+            <div className="absolute left-[50%] top-0 w-max translate-x-[-50%]  translate-y-[-50%] rounded-full bg-dark-violet p-5 lg:left-7 lg:translate-x-[0]">
+              <img src={FullyCustomizableImg} alt="" />
+            </div>
+            <h3 className="my-5 text-xl font-bold">Fully Customizable</h3>
+            <p className="text-sm leading-relaxed text-gray lg:text-base">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -9,9 +9,9 @@ body{
 
 
 .rounded-btn{
-    @apply bg-cyan py-4 px-10 text-white font-bold hover:bg-light-cyan
+    @apply  py-3 px-10 text-white font-bold 
 }
 
 .error{
-    @apply border-4 border-red
+    @apply outline outline-offset-1 outline-2  outline-red
 }
