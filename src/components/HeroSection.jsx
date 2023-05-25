@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="my-10 flex h-[50vh] justify-center md:my-0  md:h-full md:flex-1 lg:justify-start ">
         <div className=" object-cover md:w-[40%]">
           <img
-            className="h-full overflow-visible object-cover object-left md:relative "
+            className="h-full overflow-visible object-cover object-left md:relative lg:h-[75vh]"
             src={Illustration}
           />
         </div>
