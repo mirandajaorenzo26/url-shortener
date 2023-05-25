@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useState } from "react";
 
-import { LinkContext } from "../../App";
+import { LinkContext } from "../App";
 
 import LinkItem from "./LinkItem";
 

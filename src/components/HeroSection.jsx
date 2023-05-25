@@ -1,5 +1,6 @@
 import AddLinkForm from "./AddLinkForm";
 import Button from "./shared/Button";
+import Illustration from "../assets/images/illustration-working.svg";
 
 const HeroSection = () => {
   return (
@@ -8,7 +9,7 @@ const HeroSection = () => {
         <div className=" object-cover md:w-[40%]">
           <img
             className="h-full overflow-visible object-cover object-left md:relative "
-            src="../images/illustration-working.svg"
+            src={Illustration}
           />
         </div>
       </div>

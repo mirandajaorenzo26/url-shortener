@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LinkContext } from "../../App";
+import { LinkContext } from "../App";
 import Button from "./shared/Button";
 
 const AddLinkForm = () => {
