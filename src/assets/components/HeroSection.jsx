@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className=" object-cover md:w-[40%]">
           <img
             className="h-full overflow-visible object-cover object-left md:relative "
-            src="/src/assets/images/illustration-working.svg"
+            src="../images/illustration-working.svg"
           />
         </div>
       </div>
