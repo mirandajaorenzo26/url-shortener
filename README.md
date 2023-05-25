@@ -6,7 +6,6 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Features](#features)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -26,12 +25,6 @@ Users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
-
-### Features
-
-- Generates random passwords with customizable length.
-- Allows the inclusion of uppercase letters, lowercase letters, numbers, and special characters in the generated passwords.
-- Provides an intuitive user interface for easy password generation.
 
 ### Screenshots
 
