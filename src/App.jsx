@@ -3,6 +3,7 @@ import HeroSection from "./assets/components/HeroSection";
 import AdvanceStatistics from "./assets/components/AdvanceStatistics";
 import Header from "./assets/components/Header";
 import BoostLinks from "./assets/components/BoostLinks";
+import Footer from "./assets/components/Footer";
 
 export const LinkContext = createContext();
 
@@ -81,7 +82,7 @@ function App() {
 
   return (
     <>
-      <div className="px-5  md:px-16 xl:px-40 2xl:px-48">
+      <div className="px-5  md:px-16 xl:px-40 2xl:px-48 3xl:px-60">
         <Header />
       </div>
       <LinkContext.Provider
@@ -97,15 +98,18 @@ function App() {
           inputRef,
         }}
       >
-        <div className="flex h-[100vh] overflow-x-clip px-5  md:px-16 xl:px-40 2xl:px-48">
+        <div className="flex min-h-[100vh] overflow-x-clip px-5  md:px-16 xl:px-40 2xl:px-48 3xl:px-60">
           <HeroSection />
         </div>
-        <div className="bg-lighter-gray px-5 text-center  md:px-16 xl:px-40 2xl:px-48">
+        <div className="bg-lighter-gray px-5 text-center  md:px-16 xl:px-40 2xl:px-48 3xl:px-60">
           <AdvanceStatistics />
         </div>
       </LinkContext.Provider>
-      <div className="bg-dark-violet bg-[url('./assets/images/bg-boost-mobile.svg')] bg-cover p-10 px-5 text-center md:px-16  lg:bg-[url('./assets/images/bg-boost-desktop.svg')] xl:px-40 2xl:px-48">
+      <div className="bg-dark-violet bg-[url('./assets/images/bg-boost-mobile.svg')] bg-cover px-5 py-12 text-center md:px-16 lg:bg-[url('./assets/images/bg-boost-desktop.svg')]  xl:px-40 2xl:px-48 3xl:px-60">
         <BoostLinks />
+      </div>
+      <div className=" bg-very-dark-violet px-5 py-16  text-white  md:px-16 xl:px-40 2xl:px-48 3xl:px-60">
+        <Footer />
       </div>
     </>
   );

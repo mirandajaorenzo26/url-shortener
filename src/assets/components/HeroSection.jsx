@@ -4,10 +4,10 @@ import Button from "./shared/Button";
 const HeroSection = () => {
   return (
     <section className=" relative flex w-full flex-col items-center justify-between pb-32 text-center  lg:flex-row-reverse">
-      <div className="flex h-[375px] justify-center lg:h-full lg:flex-1">
-        <div className="flex-2 relative grid h-full w-[390px] items-center overflow-x-visible ">
+      <div className="my-10 flex h-[50vh] justify-center md:my-0  md:h-full md:flex-1 lg:justify-start ">
+        <div className=" object-cover md:w-[40%]">
           <img
-            className="absolute h-full overflow-visible object-cover object-left"
+            className="h-full overflow-visible object-cover object-left md:relative "
             src="/src/assets/images/illustration-working.svg"
           />
         </div>
@@ -17,14 +17,16 @@ const HeroSection = () => {
         <h1 className="text-4xl font-bold leading-relaxed lg:text-7xl">
           More than just shorter links
         </h1>
-        <p className="text-gray ">
+        <p className="max-w-lg text-gray">
           Build your brand&apos;s recognition and get detailed insights on how
           your links are performing.
         </p>
-        <Button
-          text={"Get Started"}
-          className="rounded-btn  rounded-full bg-cyan hover:bg-light-cyan"
-        />
+        <a href="#form">
+          <Button
+            text={"Get Started"}
+            className="rounded-btn  rounded-full bg-cyan hover:bg-light-cyan"
+          />
+        </a>
       </div>
       <AddLinkForm />
     </section>

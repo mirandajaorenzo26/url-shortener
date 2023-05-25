@@ -17,7 +17,7 @@ const AdvanceStatistics = () => {
         </p>
       </div>
       <div className="pb-20 font-normal">
-        <div className=" relative flex flex-col items-center gap-20  md:gap-5 lg:flex-row lg:text-left xl:gap-20">
+        <div className=" relative my-14 flex flex-col items-center gap-20 md:gap-5 lg:flex-row lg:text-left xl:gap-20">
           <div className="absolute left-[50%] h-full w-2 translate-x-[-50%]  bg-cyan lg:top-[50%] lg:h-2 lg:w-full lg:translate-y-[50%]"></div>
           <div className="relative   rounded-md bg-white px-7 py-10">
             <div className="absolute left-[50%] top-0 w-max translate-x-[-50%]  translate-y-[-50%] rounded-full bg-dark-violet p-5 lg:left-7  lg:translate-x-[0]">

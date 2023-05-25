@@ -7,9 +7,10 @@ const AddLinkForm = () => {
     useContext(LinkContext);
   return (
     <form
+      id="form"
       action=""
       onSubmit={(e) => addLink(e)}
-      className=" absolute bottom-0 grid w-full translate-y-[50%] gap-5 rounded-xl bg-dark-violet bg-[url('./assets/images/bg-boost-mobile.svg')] bg-cover p-5 lg:flex lg:rounded-md lg:bg-[url('./assets/images/bg-boost-desktop.svg')] lg:px-16 lg:py-12"
+      className="absolute bottom-0 grid w-full translate-y-[50%] scroll-m-20 gap-5 rounded-xl bg-dark-violet bg-[url('./assets/images/bg-boost-mobile.svg')] bg-cover p-5 lg:flex lg:rounded-md lg:bg-[url('./assets/images/bg-boost-desktop.svg')] lg:px-16 lg:py-12"
     >
       <div className="relative w-full">
         <input

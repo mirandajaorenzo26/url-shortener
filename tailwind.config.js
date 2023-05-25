@@ -17,6 +17,9 @@ export default {
         "very-dark-blue": "#35323e",
         "very-dark-violet": "#232127",
       },
+      screens: {
+        "3xl": "1600px",
+      },
     },
   },
   plugins: [require("prettier-plugin-tailwindcss")],
